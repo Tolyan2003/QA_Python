@@ -1,4 +1,4 @@
-from lesson_3_user import User
+from user import User
 
 # Создание экземпляра класса User
 my_name = User('Петр','Иванов')
