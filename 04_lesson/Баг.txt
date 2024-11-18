@@ -1,0 +1,2 @@
+1. FAILED 04_lesson\test_string_utils.py::test_to_list_positive[abc--output_string2] - ValueError: empty separator
+Для функции def to_list(self, string: str, delimeter=",") -> list[str]: отсутствует условие обработки случая, когда разделитель является пустой строкой
