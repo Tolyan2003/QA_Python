@@ -4,7 +4,7 @@ from time import sleep
 
 # Шаг 1: Открываем страницу
 url = 'http://uitestingplayground.com/dynamicid'
-browser = webdriver.Chrome()  # Замена на Firefox(), Edge() и др., если нужно
+browser = webdriver.Chrome()
 browser.get(url)
 sleep(2)  # Подождем пару секунд для загрузки страницы
 
