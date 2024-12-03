@@ -14,11 +14,11 @@ driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 done = WebDriverWait(driver, 20).until(
     EC.text_to_be_present_in_element((By.CSS_SELECTOR, "#text"), "Done!"))
 #берем аттрибуты 4-й картинки
-pict_4 = driver.find_element(
-    By.CSS_SELECTOR, 'img#landscape').get_dom_attribute("img#landscape")
+pict_3 = driver.find_element(
+    By.CSS_SELECTOR, 'img#award')
 
 #вывод атрибутов в консоль
-print(pict_4)
+print(pict_3.get_dom_attribute("src"))
 
 # остановка драйвера
 driver.quit()
