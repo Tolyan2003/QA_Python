@@ -24,15 +24,15 @@ def test_02_calc(driver):
     delay.send_keys("45")
 
     # Нажатие на кнопки
-    seven_button = driver.find_element(By.XPATH, "//span[.='7']")
-    plus_button = driver.find_element(By.XPATH, "//span[.='+']")
-    eight_button = driver.find_element(By.XPATH, "//span[.='8']")
-    equals_button = driver.find_element(By.XPATH, "//span[.='=']")
+    seven_button = driver.find_element(By.XPATH, "//span[.='7']").click()
+    plus_button = driver.find_element(By.XPATH, "//span[.='+']").click()
+    eight_button = driver.find_element(By.XPATH, "//span[.='8']").click()
+    equals_button = driver.find_element(By.XPATH, "//span[.='=']").click()
 
-    seven_button.click()
-    plus_button.click()
-    eight_button.click()
-    equals_button.click()
+    # seven_button.click()
+    # plus_button.click()
+    # eight_button.click()
+    # equals_button.click()
 
     # Ожидание результата
 
