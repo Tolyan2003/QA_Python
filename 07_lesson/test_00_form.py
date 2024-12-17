@@ -1,10 +1,11 @@
 from selenium import webdriver
 from MainForm import MainForm
-# from AssertForm import AssertForm
+
 
 def test_form():
     driver = webdriver.Chrome()
     main_form = MainForm(driver)
+    main_form.shop_webpage()
 
     first_name = "Иван"
     last_name = "Петров"
@@ -17,8 +18,11 @@ def test_form():
     job_position = "QA"
     company = "SkyPro"
 
-    main_form.webpage()
-    main_form.send_form(first_name, last_name, address, email, phone_number, zip_code, city, country, job_position, company)
+    filds_form = [
+        main_form.send_form(itend)
+        for itend in
+        {first_name, last_name, address, email, phone_number, zip_code, city, country, job_position, company}
+    ]
     main_form.submit()
 
     # Получение цветов полей
@@ -47,10 +51,3 @@ def test_form():
         assert color == expected_other_fields_color, f"Цвет фона одного из полей неверный. Ожидается {expected_other_fields_color}, получено {color}"
 
     main_form.close_browser()
-
-
-
-
-
-
-
