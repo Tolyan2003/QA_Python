@@ -1,5 +1,6 @@
 from selenium import webdriver
 from MainShop import MainShop
+import allure
 
 
 def test_shop():
